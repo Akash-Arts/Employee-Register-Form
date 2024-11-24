@@ -1,9 +1,10 @@
 import './App.css'
-import React , { useState } from 'react'
+import React , {  useState } from 'react'
 
 function App() {
 
   const [employees, setEmployees] = useState([]);
+  const [filterworkers, setFilterworkers] = useState([])
   const [formData, setFormData] = useState({
   name: "",
   email: "",
@@ -17,7 +18,7 @@ function App() {
   yearOfPassing: "",
 });
 
-// List of courses and nationalities for dropdown
+// List of courses, nationalities and year for dropdown
 const courses = ["Tamil", "Math", "Science", "English", "History"];
 const nationalities = ["USA", "India", "Canada", "Australia"];
 const yearOfPassing = [2020, 2021, 2022, 2023, 2024];
@@ -50,6 +51,7 @@ const handleSubmit = (e) => {
   e.preventDefault();
   if (formData.name && formData.email) {
     setEmployees([...employees, { ...formData, id: Date.now() }]);
+    setFilterworkers([...employees, { ...formData, id: Date.now() }])
     setFormData({
       name: "",
       email: "",
@@ -65,12 +67,15 @@ const handleSubmit = (e) => {
   } else {
     alert("Please fill in the required fields!");
   }
+  
 };
 // handleSearchChange
 const handleSearchChange = (e) => {
   const searchText = e.target.value.toLowerCase()
-  const filteredEmployees = employees.find((employee) => employee.name===searchText)
-  setEmployees(filteredEmployees)
+  const filteredEmployees = employees.filter((worker)=>
+    worker.name.toLowerCase().includes(searchText) || 
+    worker.address.toLowerCase().includes(searchText))
+  setFilterworkers(filteredEmployees)
 }
 
 // Handle delete employee
@@ -189,7 +194,7 @@ const handleEdit = (id) => {
           </tr>
         </thead>
         <tbody>
-          {employees.map((employee,index) => (
+          {filterworkers.map((employee,index) => (
             <tr key={employee.id}>
               <td>{ index+1 }</td>
               <td>{employee.name}</td>
