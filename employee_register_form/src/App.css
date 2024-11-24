@@ -1,0 +1,158 @@
+.form-container {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f3f4f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  h2 {
+    text-align: center;
+    color: black;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .form-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  .form-table td {
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .form-table input,
+  .form-table select,
+  .form-table textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .form-table textarea {
+    resize: vertical;
+  }
+  
+  .submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 20%;
+  }
+  
+  .submit-btn:hover {
+    background-color: #45a049;
+  }
+
+  .search{
+    padding: 8px 10px;
+    font-size: 16px;
+    width: 30%;
+  }
+
+  label {
+    display: inline-flex;
+    
+  }
+  input[type="radio"]{
+    display: inline-flex;
+  }
+  span{
+    padding-top: 4px;
+    padding-left: 5px;
+  }
+  .form-table tr:nth-child(3) td:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+  }
+  .form-table tr:nth-child(6) td:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+  }
+  .form-table tr:nth-child(2) td:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 8px;
+  }
+  .form-table tr td:nth-child(2){
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  
+  textarea {
+    height: 70px;
+  }
+  
+  .submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .edit{
+    background-color: rgb(4, 194, 4);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+
+  }
+  .delete {
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  .delete:hover{
+    background-color: darkred;
+  }
+  .edit:hover{
+    background-color: darkgreen;
+  }
+  .submit:hover {
+    background-color: #45a049;
+  }
+  
+  .formdata-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  
